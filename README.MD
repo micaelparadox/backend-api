@@ -10,5 +10,5 @@ export FLASK_ENV=development
 ```
 
 ```bash
-$ flask run
+$ cd ./src && flask run
 ```
