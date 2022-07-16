@@ -13,5 +13,6 @@ class User(db.Model):
             'name': self.name,
             'city': self.city,
             'state': self.state,
-            'address': self.address
+            'address': self.address,
+            'age': self.age,
         }
