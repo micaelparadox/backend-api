@@ -16,8 +16,8 @@ cd ./src && flask run
 ### Extra Info
 
 ```bash
-- flask db init : it will create the migrations folder with a version subfolder.
-- flask db migrate : it will detect the model changes with an upgrade and downgrade logic set up.
-- flask db upgrade : it will apply the model changes you have implemented.
-- flask db downgrade : if something goes wrong, you can use this command to unapply changes you have done on your model file.
+flask db init: ele criará a pasta de migrações com uma subpasta de versão.
+flask db migrate: ele detectará as alterações desse modelo com uma configuração de lógica de upgrade e downgrade.
+flask db upgrade: ele aplicará as mudanças de modelo que você implementou.
+flask db downgrade: se algo der errado, você pode usar este comando para não aplicar as alterações feitas no arquivo de modelo.
 ```
