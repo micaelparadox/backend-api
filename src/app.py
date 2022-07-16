@@ -23,7 +23,7 @@ def create():
     new_user = User()
     db.session.add(new_user)
     db.session.commit()
-    return jsonify(data['age'])
+    return jsonify(data)
 
 
 if __name__ == '__main__':
