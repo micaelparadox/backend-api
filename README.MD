@@ -3,7 +3,7 @@
 ```bash
 $ pip install -r requirements.txt
 ```
-### Extra Infos
+### Enable debugger
 
 ```bash
 export FLASK_ENV=development
@@ -12,17 +12,12 @@ export FLASK_ENV=development
 ```bash
 cd ./src && flask run
 ```
-### Generate an specific Migration
 
-```bash
-$ flask db init
-$ flask db migrate
-```
-### Db reversion to a previous version
+### Extra Info
 
-```bash
-$ flask db downgrade
 ```
-```bash
-$ flask db revision --rev-id ('someID of reversion') 
-```
+- flask db init : it will create the migrations folder with a version subfolder.
+- flask db migrate : it will detect the model changes with an upgrade and downgrade logic set up.
+- flask db upgrade : it will apply the model changes you have implemented.
+- flask db downgrade : if something goes wrong, you can use this command to unapply changes you have done on your model file.
+s```
