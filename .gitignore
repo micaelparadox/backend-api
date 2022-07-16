@@ -1,0 +1,6 @@
+/src/__pycache__
+node_modules
+.cache
+.DS_Store
+.venv
+.env

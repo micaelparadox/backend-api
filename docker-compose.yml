@@ -1,0 +1,30 @@
+# docker-compose.yml
+
+version: '3'
+services:
+
+  # Docker connection string: postgres://postgres:postgres@localhost:5432/
+
+  # python version for 
+  python:
+    image: python:latest
+    volumes:
+      - ./src:/python_app
+    command: ["python","/python_app/app.py"]
+    ports:
+      - 9000:9000
+
+  # postgres instance for project. 
+  postgres:
+    image: postgres:13.5
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:
